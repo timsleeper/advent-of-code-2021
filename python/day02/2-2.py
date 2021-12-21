@@ -1,5 +1,5 @@
 def solve():
-	with open('input-test.txt') as infile:
+	with open('input.txt') as infile:
 		data = [line.strip() for line in infile.readlines()]
 
 	horizontal = 0
@@ -10,10 +10,10 @@ def solve():
 			horizontal += int(data[i].split()[1])
 			vertical += aim * int(data[i].split()[1])
 		elif data[i].split()[0] == 'up':
-			vertical -= int(data[i].split()[1])
+			#vertical -= int(data[i].split()[1])
 			aim -= int(data[i].split()[1])
 		elif data[i].split()[0] == 'down':
-			vertical += int(data[i].split()[1])
+			#vertical += int(data[i].split()[1])
 			aim += int(data[i].split()[1])
 	
 	print(horizontal * vertical)
